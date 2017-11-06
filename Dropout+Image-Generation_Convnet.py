@@ -1,4 +1,4 @@
-#This is a convolutional neural network that trains on images of cats and dogs
+#This is a convolutional neural network that trains on images, in this case images of cats and dogs
 #The non-standard tweaks in this program mainly come from the datagen implementation
 #and the inclusion of a Dropout layer in the model
 #Datagen in this program generates new maniplated images from our base dataset
@@ -24,7 +24,7 @@ validation_dir = '/your/validation/data'
 #Dropout randomly causes (according to a defined percentage) features of a layers output to equal to 0.
 #On face value, this seems activley harmful to the model's training, however
 #Using dropout allows the model to get a better grasp on the strongest patterns within the data, which are 
-#stastically more likely to surivie being damaged by the droput than weaker patterns
+#statistically more likely to surivie being damaged by the droput than weaker patterns
 #Therefore, Dropout helps cut through the misleading patterns our model might otherwise find in its computations
 model = models.Sequential()
 model.add(layers.Conv2D(32, (3, 3), activation='relu',
@@ -66,7 +66,7 @@ train_generator = train_datagen.flow_from_directory(
 	# We're using binary_crossentropy as our loss value, so we need to label our data in a binary way
 	class_mode='binary')
 
-#we process our validation images to have the same overall characteristics as our training images
+#We process our validation images to have the same overall characteristics as our training images
 test_datagen = ImageDataGenerator(rescale=1./255)
 validation_generator = test_datagen.flow_from_directory(
 	validation_dir,
