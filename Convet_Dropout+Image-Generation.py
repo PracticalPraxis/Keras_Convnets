@@ -19,8 +19,8 @@ train_dir = '/your/training/data/'
 validation_dir = '/your/validation/data'
 
 #Standard Keras Convnet model with additional Flatten and Dropout layer
-#We use Flatten to turn the 3D tensors of our image data into 1D vectors so they can be efficently dealt with by the Dropout layer
-
+#We use Flatten to turn the 3D tensors of our image data into 1D vectors so they can be efficently dealt with 
+#by the Dropout layer
 #Dropout randomly causes (according to a defined percentage) features of a layers output to equal to 0.
 #On face value, this seems activley harmful to the model's training, however
 #Using dropout allows the model to get a better grasp on the strongest patterns within the data, which are 
